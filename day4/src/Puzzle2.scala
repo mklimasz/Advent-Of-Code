@@ -6,6 +6,7 @@ object Puzzle2 {
       .mapValues(_.length)
       .toList
       .sortBy({case (k,v) => (-v, k)})
+      .take(5)
       .foldLeft(tuple._3)((checkSum, t) =>
         if (checkSum.isEmpty)
           checkSum
